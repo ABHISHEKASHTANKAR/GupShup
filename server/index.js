@@ -14,7 +14,7 @@ const app = express();
 dotenv.config();
 
 app.use(cors({
-    origin: 'https://gupshup-jvb6.onrender.com',
+    origin: 'https://scintillating-tartufo-d1b871.netlify.app',
     credentials: true,
 }));
 
@@ -41,7 +41,7 @@ const server = app.listen(PORT, () => {
 
 const io = new Server(server, {
     cors: {
-        origin: "https://gupshup-jvb6.onrender.com",
+        origin: "https://scintillating-tartufo-d1b871.netlify.app",
         credentials: true
     }
 })

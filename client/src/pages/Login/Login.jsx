@@ -65,6 +65,7 @@ const Login = () => {
 
     const handleSubmit = async(event) => {
         event.preventDefault();
+        console.log(loginApi);
         if(handleValidation()){
             try{
                 const response = await axios.post(loginApi, userData);
