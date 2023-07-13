@@ -7,6 +7,7 @@ import Welcome from '../../components/Welcome/Welcome'
 import { useSelector, useDispatch } from 'react-redux'
 import { setOnlineContacts } from '../../store/contactSlice'
 import { io } from 'socket.io-client';
+import { host } from '../../apis/restapis'
 
 
 const Chat = () => {
@@ -18,7 +19,7 @@ const Chat = () => {
 
   useEffect(() => {
     if (CurrentUser) {
-        socket.current = io('http://localhost:5000');
+        socket.current = io(`${host}`);
         socket.current.emit('add-user', CurrentUser._id);
         console.log(socket);
     }

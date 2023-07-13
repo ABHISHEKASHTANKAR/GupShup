@@ -7,10 +7,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setSelectedContact } from '../../store/contactSlice';
 import EmogiPicker from './EmogiPicker'
 import ChatContainer from './ChatContainer';
-import { addMessageApi } from '../../apis/restapis';
+import { addMessageApi, host } from '../../apis/restapis';
 import { io } from 'socket.io-client';
 import { setMessageArr } from '../../store/messageSlice';
-import { setOnlineContacts } from '../../store/contactSlice';
 
 const ChatBox = (props) => {
     const socket = useRef(null);
@@ -27,7 +26,7 @@ const ChatBox = (props) => {
 
     useEffect(() => {
         if (CurrentUser) {
-            socket.current = io('http://localhost:5000');
+            socket.current = io(`${host}`);
             socket.current.emit('add-user', CurrentUser._id);
             console.log(socket);
         }
