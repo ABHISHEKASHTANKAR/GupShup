@@ -24,7 +24,7 @@ app.use('/api', UserRoutes);
 app.use('/message', MessageRoutes);
 
 
-const PORT = process.env.port || 3001;
+const PORT = process.env.port || 5000;
 
 
 connectToDb().then(() => {
