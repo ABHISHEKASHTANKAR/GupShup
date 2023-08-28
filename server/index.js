@@ -14,7 +14,7 @@ const app = express();
 dotenv.config();
 
 app.use(cors({
-    origin: 'https://scintillating-tartufo-d1b871.netlify.app',
+    origin: 'https://gupshupwithabhi.netlify.app',
     credentials: true,
 }));
 
