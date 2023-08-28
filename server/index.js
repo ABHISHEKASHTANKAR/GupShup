@@ -41,7 +41,7 @@ const server = app.listen(PORT, () => {
 
 const io = new Server(server, {
     cors: {
-        origin: "https://scintillating-tartufo-d1b871.netlify.app",
+        origin: "https://gupshupwithabhi.netlify.app",
         credentials: true
     }
 })
